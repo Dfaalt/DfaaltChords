@@ -154,9 +154,10 @@ export const ChordHover = ({ rawChord }: ChordHoverProps) => {
   return (
     <HoverCard openDelay={80} closeDelay={80}>
       <HoverCardTrigger asChild>{trigger}</HoverCardTrigger>
-      <HoverCardContent className="w-auto">
+
+      <HoverCardContent className="w-[200px] min-w-0 p-1 rounded-md bg-white text-slate-900 border border-slate-200 shadow-xl dark:bg-white dark:text-slate-900 dark:border-slate-200">
         <div className="flex flex-col items-center gap-2">
-          <span className="text-sm font-semibold">{label}</span>
+          <span className="text-sm font-semibold text-slate-900">{label}</span>
 
           <ChordDiagram
             chord={chordShape as any}

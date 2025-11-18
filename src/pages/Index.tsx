@@ -3,7 +3,7 @@ import { SongCard } from "@/components/SongCard";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { mockSongs } from "@/data/mockSongs";
-import { Music2, Plus } from "lucide-react";
+import { Music2, Plus, Guitar } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ export const Index = () => {
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Music2 className="h-6 w-6 text-primary" />
+            <Guitar className="h-6 w-6 text-primary" />
             <span className="font-bold text-xl">dfaalt chords</span>
           </div>
           <div className="flex items-center gap-2">

@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { TransposeControls } from "@/components/TransposeControls";
 import { Button } from "@/components/ui/button";
 import { mockSongs } from "@/data/mockSongs";
-import { ArrowLeft, Music2 } from "lucide-react";
+import { ArrowLeft, Guitar } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -15,6 +15,17 @@ export const SongDetail = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollSpeed, setScrollSpeed] = useState(3);
   const scrollRef = useRef<NodeJS.Timeout | null>(null);
+
+  const MAX_TRANSPOSE = 11;
+  const MIN_TRANSPOSE = -11;
+
+  const handleTransposeUp = () => {
+    setTranspose((prev) => (prev < MAX_TRANSPOSE ? prev + 1 : prev));
+  };
+
+  const handleTransposeDown = () => {
+    setTranspose((prev) => (prev > MIN_TRANSPOSE ? prev - 1 : prev));
+  };
 
   useEffect(() => {
     if (isScrolling) {
@@ -62,8 +73,8 @@ export const SongDetail = () => {
             </Button>
           </Link>
           <div className="flex items-center gap-2">
-            <Music2 className="h-5 w-5 text-primary" />
-            <span className="font-bold text-lg">ChordHub</span>
+            <Guitar className="h-5 w-5 text-primary" />
+            <span className="font-bold text-lg">Dfaalt Chords</span>
           </div>
           <ThemeToggle />
         </div>
@@ -81,8 +92,8 @@ export const SongDetail = () => {
         <div className="sticky top-16 z-40 bg-background/95 backdrop-blur pb-6 space-y-4">
           <TransposeControls
             transpose={transpose}
-            onTransposeUp={() => setTranspose((prev) => prev + 1)}
-            onTransposeDown={() => setTranspose((prev) => prev - 1)}
+            onTransposeUp={handleTransposeUp}
+            onTransposeDown={handleTransposeDown}
           />
           <AutoScrollControls
             isScrolling={isScrolling}
