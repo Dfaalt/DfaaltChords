@@ -41,7 +41,8 @@ type GuitarDb = {
 
 // handle kemungkinan ada `.default`
 const getGuitarDb = (): GuitarDb => {
-  const dbAny = (guitarJson as any).default ?? guitarJson;
+  const dbAny =
+    (guitarJson as unknown as { default?: unknown })?.default ?? guitarJson;
   return dbAny as GuitarDb;
 };
 
@@ -51,7 +52,7 @@ const cleanChordLabel = (raw: string) => {
   let label = raw?.trim?.() ?? "";
 
   // buang [ ], ( )
-  label = label.replace(/[\[\]()]/g, "");
+  label = label.replace(/[()[\]]/g, "");
 
   return label.trim();
 };
@@ -160,8 +161,8 @@ export const ChordHover = ({ rawChord }: ChordHoverProps) => {
           <span className="text-sm font-semibold text-slate-900">{label}</span>
 
           <ChordDiagram
-            chord={chordShape as any}
-            instrument={GUITAR_INSTRUMENT as any}
+            chord={chordShape}
+            instrument={GUITAR_INSTRUMENT}
             lite={false}
           />
         </div>
