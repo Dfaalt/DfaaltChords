@@ -684,36 +684,36 @@ export const mockSongs: Song[] = [
       },
       {
         chordLyric:
-          "[Am7]We'll have been talking, but not all that [C]often, we're cool now",
+          "We'll have been [Am7]talking, but not all that [C]often, we're cool now",
       },
       {
         chordLyric:
-          "[G]I'll be on a [D]boat, you're on a [Am7]plane going [C]somewhere, [G]same",
+          "[G]I'll be on a [D]boat, you're on a [Am7]plane [C]going somewhere, [G]same",
       },
       {
-        chordLyric: "[D]And I'll have a drink",
+        chordLyric: "And I'll have a [D]drink",
       },
       {
         chordLyric:
-          "[Am7]Wistfully lean out my [C]window and watch the sun set on the [G]lake",
+          "Wistfully [Am7]lean out my window and [C]watch the sun set on the [G]lake",
       },
       {
-        chordLyric: "[D]I might not feel [Am7]real, but it's [C]okay, mmm",
+        chordLyric: "I might not feel [D]real, but it's [Am7]okay, m[C]mm",
       },
 
       // Chorus 2
       {
         part: "Chorus",
-        chordLyric: "[G]'Cause that's just the [D]way life goes",
+        chordLyric: "'Cause that's just the [G]way life [D]goes",
       },
       {
-        chordLyric: "[Am7]I push my luck, it [C]shows",
+        chordLyric: "I push my [Am7]luck, it [C]shows",
       },
       {
-        chordLyric: "[G]Thankful you [D]don't send someone to kill [Am7]me",
+        chordLyric: "Thankful you [G]don't send [D]someone to kill me[Am7]",
       },
       {
-        chordLyric: "[C]I love you, I'm sorry",
+        chordLyric: "I [C]love you, I'm sorry",
       },
 
       // Bridge
@@ -722,56 +722,56 @@ export const mockSongs: Song[] = [
         chordLyric: "[G]You were the best but you were the worst",
       },
       {
-        chordLyric: "[D]As sick as it sounds, I loved you first",
+        chordLyric: "As [D]sick as it sounds, I loved you first",
       },
       {
         chordLyric: "[Am7]I was a dick, it is what it is",
       },
       {
-        chordLyric: "[C]A habit to kick the age-old curse",
+        chordLyric: "A [C]habit to kick the age-old curse",
       },
       {
         chordLyric: "[Em]I tend to laugh whenever I'm sad",
       },
       {
-        chordLyric: "[D]I stare at the crash, it actually works",
+        chordLyric: "I [D]stare at the crash, it actually works",
       },
       {
         chordLyric: "[Am7]Making amends, this shit never ends",
       },
       {
-        chordLyric: "[C]I'm wrong again, wrong again",
+        chordLyric: "I'm [C]wrong again, wrong again",
       },
 
       // Chorus 3
       {
         part: "Chorus",
-        chordLyric: "[G]The way life [D]goes",
+        chordLyric: "The [G]way life [D]goes",
       },
       {
-        chordLyric: "[Am7]Joyriding down our [C]road",
-      },
-      {
-        chordLyric:
-          "[G]Lay on the [D]horn to prove that it haunts [Am7]me (I'm wrong again, wrong again)",
-      },
-      {
-        chordLyric: "[C]I love you, I'm sorry",
+        chordLyric: "Joyriding [Am7]down our [C]road",
       },
       {
         chordLyric:
-          "[G]The way life [D]goes (You were the best but you were the worst) (As sick as it sounds, I loved you first)",
+          "Lay on the [G]horn to [D]prove that it haunts me[Am7] (I'm wrong again, wrong again)",
+      },
+      {
+        chordLyric: "I [C]love you, I'm sorry",
       },
       {
         chordLyric:
-          "[Am7]I wanna speak in [C]code (I was a dick, it is what it is) (A habit to kick, the age-old curse)",
+          "The [G]way life [D]goes (You were the best but you were the worst) (As sick as it sounds, I loved you first)",
       },
       {
         chordLyric:
-          "[G]Hope that I [D]don't, won't make it about [Am7]me (I tend to laugh whenever I'm sad)",
+          "I wanna [Am7]speak in [C]code (I was a dick, it is what it is) (A habit to kick, the age-old curse)",
       },
       {
-        chordLyric: "[C]I love you, I'm sorry",
+        chordLyric:
+          "Hope that I [G]don't, won't [D]make it about me[Am7] (I tend to laugh whenever I'm sad)",
+      },
+      {
+        chordLyric: "I [C]love you, I'm sorry",
       },
     ],
   },
