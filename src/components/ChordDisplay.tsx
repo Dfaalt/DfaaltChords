@@ -8,7 +8,7 @@ interface ChordDisplayProps {
 }
 
 // Helper: parse "[G]Like a drum [Em7]don't stop" jadi 2 baris:
-// chords: "G                 Em7       ..."
+// chords: "G                Em7       ..."
 // lyric:  "Like a drum      don't stop..."
 const parseChordLyric = (input: string, transpose: number) => {
   let lyric = "";
