@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, Music2, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { toast } from "sonner"; // ⬅️ pakai Sonner
+import { toast } from "sonner";
 
 interface ChordSection {
   part: string;
@@ -95,10 +95,10 @@ export const UploadChord = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-8">
           {/* Song Info */}
-          <div className="bg-card border border-border rounded-lg p-6 space-y-4">
-            <div>
+          <div className="bg-card border border-border rounded-lg p-6 space-y-6">
+            <div className="space-y-2">
               <Label htmlFor="title">Song Title *</Label>
               <Input
                 id="title"
@@ -108,7 +108,7 @@ export const UploadChord = () => {
                 required
               />
             </div>
-            <div>
+            <div className="space-y-2">
               <Label htmlFor="artist">Artist *</Label>
               <Input
                 id="artist"
@@ -133,7 +133,7 @@ export const UploadChord = () => {
             {sections.map((section, index) => (
               <div
                 key={index}
-                className="bg-card border border-border rounded-lg p-6 space-y-4"
+                className="bg-card border border-border rounded-lg p-6 space-y-6"
               >
                 <div className="flex items-center justify-between">
                   <Label>Section {index + 1}</Label>
@@ -149,7 +149,7 @@ export const UploadChord = () => {
                   )}
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <Label htmlFor={`part-${index}`}>
                     Part Name (e.g., Verse 1, Chorus)
                   </Label>
@@ -163,7 +163,7 @@ export const UploadChord = () => {
                   />
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <Label htmlFor={`chords-${index}`}>Chords</Label>
                   <Input
                     id={`chords-${index}`}
@@ -176,7 +176,7 @@ export const UploadChord = () => {
                   />
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <Label htmlFor={`lyrics-${index}`}>Lyrics</Label>
                   <Textarea
                     id={`lyrics-${index}`}

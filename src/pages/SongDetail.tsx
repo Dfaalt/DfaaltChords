@@ -14,7 +14,7 @@ export const SongDetail = () => {
   const [transpose, setTranspose] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollSpeed, setScrollSpeed] = useState(3);
-  const scrollRef = useRef<NodeJS.Timeout | null>(null);
+  const scrollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const MAX_TRANSPOSE = 11;
   const MIN_TRANSPOSE = -11;
@@ -37,13 +37,13 @@ export const SongDetail = () => {
       }, 100 / scrollSpeed);
     } else {
       if (scrollRef.current) {
-        clearInterval(scrollRef.current);
+        window.clearInterval(scrollRef.current);
       }
     }
 
     return () => {
       if (scrollRef.current) {
-        clearInterval(scrollRef.current);
+        window.clearInterval(scrollRef.current);
       }
     };
   }, [isScrolling, scrollSpeed]);
