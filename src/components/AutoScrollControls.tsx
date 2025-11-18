@@ -47,7 +47,7 @@ export const AutoScrollControls = ({
           step={1}
           className="flex-1"
         />
-        <span className="text-sm font-medium min-w-[20px]">{speed}</span>
+        <span className="text-sm font-medium min-w-5">{speed}</span>
       </div>
     </div>
   );

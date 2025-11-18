@@ -3,28 +3,27 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 export const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(true);
+  // Tentukan default theme sekali di awal
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") return true; // kalau SSR aman
 
-  useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const isDarkMode = savedTheme ? savedTheme === "dark" : true;
-    setIsDark(isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      if (!savedTheme) localStorage.setItem("theme", "dark");
-    }
-  }, []);
+    return savedTheme ? savedTheme === "dark" : true; // default dark
+  });
 
-  const toggleTheme = () => {
-    const newIsDark = !isDark;
-    setIsDark(newIsDark);
-    if (newIsDark) {
+  // Setiap isDark berubah → sync ke <html> & localStorage
+  useEffect(() => {
+    if (isDark) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
+  }, [isDark]);
+
+  const toggleTheme = () => {
+    setIsDark((prev) => !prev);
   };
 
   return (
@@ -34,11 +33,7 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className="rounded-full"
     >
-      {isDark ? (
-        <Sun className="h-5 w-5" />
-      ) : (
-        <Moon className="h-5 w-5" />
-      )}
+      {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </Button>
   );
 };
