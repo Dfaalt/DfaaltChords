@@ -3,7 +3,7 @@ import { SongCard } from "@/components/SongCard";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { mockSongs } from "@/data/mockSongs";
-import { Music2, Plus, Guitar } from "lucide-react";
+import { Disc3, Plus, Guitar } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -70,7 +70,7 @@ export const Index = () => {
           </div>
         ) : (
           <div className="text-center py-16">
-            <Music2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+            <Disc3 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">No songs found</h3>
             <p className="text-muted-foreground">
               Try searching with different keywords
