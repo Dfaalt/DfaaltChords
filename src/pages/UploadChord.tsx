@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Music2, Plus, Trash2 } from "lucide-react";
+import { ArrowLeft, Guitar, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
@@ -79,8 +79,8 @@ export const UploadChord = () => {
             </Button>
           </Link>
           <div className="flex items-center gap-2">
-            <Music2 className="h-5 w-5 text-primary" />
-            <span className="font-bold text-lg">ChordHub</span>
+            <Guitar className="h-5 w-5 text-primary" />
+            <span className="font-bold text-lg">Dfaalt Chords</span>
           </div>
           <ThemeToggle />
         </div>

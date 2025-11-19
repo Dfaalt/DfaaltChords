@@ -77,77 +77,78 @@ const isChordToken = (token: string) => {
   return /^[A-G][b#]?[0-9A-Za-z/#+]*$/.test(core);
 };
 
+// Posisi chord dalam 1 baris (pakai index kolom)
+type ChordPlacement = {
+  left: string;
+  core: string;
+  right: string;
+  column: number; // posisi mulai chord (dalam karakter)
+};
+
 /**
- * Render baris chord (string) menjadi kombinasi:
- * - spasi biasa → <span>   </span>
- * - token chord → <ChordHover />
- * supaya style chord tetap pakai pill HoverCard
+ * Render baris chord (string) menjadi:
+ * - baseline monospace tak terlihat (buat jaga lebar & alignment)
+ * - overlay pill <ChordHover> di posisi kolom yang sama
  */
 const renderChordLine = (line: string, keyPrefix: string) => {
-  const nodes: React.ReactNode[] = [];
-  let current = "";
-  let currentIsSpace = line[0] === " ";
-  let idx = 0;
+  if (!line) return null;
 
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    const isSpace = ch === " ";
+  const placements: ChordPlacement[] = [];
 
-    if (isSpace === currentIsSpace) {
-      current += ch;
-    } else {
-      // flush segmen sebelumnya
-      if (current) {
-        if (currentIsSpace) {
-          nodes.push(<span key={`${keyPrefix}-sp-${idx++}`}>{current}</span>);
-        } else {
-          const token = current.trim();
-          if (token && isChordToken(token)) {
-            const { left, core, right } = extractChordCore(token);
+  let i = 0;
+  while (i < line.length) {
+    // skip spasi
+    if (line[i] === " ") {
+      i++;
+      continue;
+    }
 
-            nodes.push(
-              <span
-                key={`${keyPrefix}-ch-${idx++}`}
-                className="inline-block align-baseline"
-              >
-                {left && <span>{left}</span>}
-                <ChordHover rawChord={core} />
-                {right && <span>{right}</span>}
-              </span>
-            );
-          } else {
-            nodes.push(<span key={`${keyPrefix}-tx-${idx++}`}>{current}</span>);
-          }
-        }
-      }
+    // ambil token non-spasi (kandidat chord)
+    const start = i;
+    let token = "";
 
-      current = ch;
-      currentIsSpace = isSpace;
+    while (i < line.length && line[i] !== " ") {
+      token += line[i];
+      i++;
+    }
+
+    if (token && isChordToken(token)) {
+      const { left, core, right } = extractChordCore(token);
+
+      placements.push({
+        left,
+        core,
+        right,
+        column: start,
+      });
     }
   }
 
-  // flush segmen terakhir
-  if (current) {
-    if (currentIsSpace) {
-      nodes.push(<span key={`${keyPrefix}-sp-last`}>{current}</span>);
-    } else {
-      const token = current.trim();
-      if (token && isChordToken(token)) {
-        nodes.push(
-          <span
-            key={`${keyPrefix}-ch-last`}
-            className="inline-block align-baseline"
+  return (
+    <>
+      {/* baseline monospace tak terlihat → jaga lebar & posisi */}
+      <span className="opacity-0 select-none">{line}</span>
+
+      {/* overlay pill-chord di atas baseline */}
+      <div className="absolute left-0 top-0 pointer-events-none">
+        {placements.map((p, idx) => (
+          <div
+            key={`${keyPrefix}-ch-${idx}`}
+            style={{
+              position: "absolute",
+              left: `calc(${p.column}ch - 0.4ch)`, // 1ch = lebar 1 karakter monospace
+              top: 0,
+              pointerEvents: "auto",
+            }}
           >
-            <ChordHover rawChord={token} />
-          </span>
-        );
-      } else {
-        nodes.push(<span key={`${keyPrefix}-tx-last`}>{current}</span>);
-      }
-    }
-  }
-
-  return nodes;
+            {p.left && <span>{p.left}</span>}
+            <ChordHover rawChord={p.core} />
+            {p.right && <span>{p.right}</span>}
+          </div>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export const ChordDisplay = ({ chords, transpose }: ChordDisplayProps) => {
@@ -167,9 +168,9 @@ export const ChordDisplay = ({ chords, transpose }: ChordDisplayProps) => {
               </h3>
             )}
 
-            <pre className="chord-font text-sm leading-snug whitespace-pre-wrap wrap-break-words">
-              {/* Baris chord – tetap di atas lirik */}
-              <span className="text-primary font-semibold block mb-1 whitespace-pre">
+            <pre className="chord-font text-sm leading-snug whitespace-pre-wrap wrap-break-words relative">
+              {/* Baris chord – baseline + overlay pill */}
+              <span className="text-primary font-semibold block mb-1 whitespace-pre relative">
                 {renderChordLine(chordLine, `line-${index}`)}
               </span>
 
