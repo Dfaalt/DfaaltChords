@@ -775,4 +775,179 @@ export const mockSongs: Song[] = [
       },
     ],
   },
+
+  // Night Changes - One Direction
+  {
+    id: 6,
+    title: "Night Changes",
+    artist: "One Direction",
+    chords: [
+      // Verse 1
+      {
+        part: "Verse 1",
+        chordLyric: "[G]Going out tonight, changes into something red",
+      },
+      {
+        chordLyric: "[C]Her mother doesn’t like that kind of dress",
+      },
+      {
+        chordLyric: "[G]Everything she never had",
+      },
+      {
+        chordLyric: "She’s showing off[D]",
+      },
+      {
+        chordLyric: "[G]Driving too fast, moon is breaking through her hair",
+      },
+      {
+        chordLyric: "[C]She headin' for somethin' that she won’t forget",
+      },
+      {
+        chordLyric: "[G]Having no regrets is all that she really [D]wants",
+      },
+
+      // Chorus 1
+      {
+        part: "Chorus",
+        chordLyric: "[Am]We're only getting [D]older baby",
+      },
+      {
+        chordLyric: "[Am]And I’ve been thinking [D]about it lately",
+      },
+      {
+        chordLyric: "[Am]Does it ever [D]drive you crazy",
+      },
+      {
+        chordLyric: "[G]Just how [D]fast [C]the night changes",
+      },
+      {
+        chordLyric: "[Am]Everything that you’ve [D]ever dreamed of",
+      },
+      {
+        chordLyric: "[Am]Disappearing [D]when you wake up",
+      },
+      {
+        chordLyric: "[Am]But there’s nothing to [D]be afraid of",
+      },
+      {
+        chordLyric: "[G]Even [D]when the [C]night changes",
+      },
+      {
+        chordLyric: "[Am]It will never [D]change me and [G]you",
+      },
+
+      // Turnaround
+      {
+        chordLyric: "[G]",
+      },
+
+      // Verse 2
+      {
+        part: "Verse 2",
+        chordLyric: "[G]Chasing it tonight, doubts are running ‘round her head",
+      },
+      {
+        chordLyric: "[C]He’s waiting, hides behind a cigarette",
+      },
+      {
+        chordLyric: "[G]Heart is beating loud and she doesn’t want it",
+      },
+      {
+        chordLyric: "[D]to stop",
+      },
+      {
+        chordLyric: "[G]Moving too fast, moon is lighting up her skin",
+      },
+      {
+        chordLyric: "[C]She’s falling, doesn’t even know it yet",
+      },
+      {
+        chordLyric: "[G]Having no regrets is all that she really [D]wants",
+      },
+
+      // Chorus 2
+      {
+        part: "Chorus",
+        chordLyric: "[Am]We're only getting [D]older baby",
+      },
+      {
+        chordLyric: "[Am]And I’ve been thinking [D]about it lately",
+      },
+      {
+        chordLyric: "[Am]Does it ever [D]drive you crazy",
+      },
+      {
+        chordLyric: "[G]Just how [D]fast the [C]night changes",
+      },
+      {
+        chordLyric: "[Am]Everything that you’ve [D]ever dreamed of",
+      },
+      {
+        chordLyric: "[Am]Disappearing [D]when you wake up",
+      },
+      {
+        chordLyric: "[Am]But there’s nothing to [D]be afraid of",
+      },
+      {
+        chordLyric: "[G]Even [D]when the [C]night changes",
+      },
+      {
+        chordLyric: "[Am]It will never [D]change me and [G]you",
+      },
+      {
+        chordLyric: "[G]      [D]",
+      },
+
+      // Bridge
+      {
+        part: "Bridge",
+        chordLyric: "[A]Going out tonight, changes into something red",
+      },
+      {
+        chordLyric: "[D]Her mother doesn’t like that kind of dress",
+      },
+      {
+        chordLyric: "[A]Reminds her of a missing piece of innocence",
+      },
+      {
+        chordLyric: "[E]she lost",
+      },
+
+      // Final Chorus
+      {
+        part: "Chorus",
+        chordLyric: "[Bm]We're only getting [E]older baby",
+      },
+      {
+        chordLyric: "[Bm]And I’ve been thinking[E] about you lately",
+      },
+      {
+        chordLyric: "[Bm]Does it ever [E]drive you crazy",
+      },
+      {
+        chordLyric: "[A]Just how [E]fast the [D]night changes",
+      },
+      {
+        chordLyric: "[Bm]Everything that you’ve [E]ever dreamed of",
+      },
+      {
+        chordLyric: "[Bm]Disappearing [E]when you wake up",
+      },
+      {
+        chordLyric: "[Bm]But there’s nothing to [E]be afraid of",
+      },
+      {
+        chordLyric: "[A]Even [E]when the [D]night changes",
+      },
+      {
+        chordLyric: "[Bm]It will never [E]change, baby",
+      },
+      {
+        chordLyric: "[Bm]We will never [E]change, baby",
+      },
+      {
+        chordLyric: "[Bm]It will never [E]change me and [A]you",
+      },
+    ],
+  },
 ];
