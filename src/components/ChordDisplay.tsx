@@ -94,6 +94,8 @@ const renderChordLine = (line: string, keyPrefix: string) => {
   if (!line) return null;
 
   const placements: ChordPlacement[] = [];
+  // salin karakter untuk baseline yang kelihatan
+  const chars = line.split("");
 
   let i = 0;
   while (i < line.length) {
@@ -115,19 +117,30 @@ const renderChordLine = (line: string, keyPrefix: string) => {
     if (token && isChordToken(token)) {
       const { left, core, right } = extractChordCore(token);
 
+      // simpan posisi buat pill
       placements.push({
         left,
         core,
         right,
         column: start,
       });
+
+      // hapus teks chord dari baseline → ganti spasi
+      for (let k = start; k < i; k++) {
+        chars[k] = " ";
+      }
     }
   }
 
+  // baseline yang kelihatan: chord sudah jadi spasi, | dan % tetap ada
+  const visibleLine = chars.join("");
+
   return (
     <>
-      {/* baseline monospace tak terlihat → jaga lebar & posisi */}
-      <span className="opacity-0 select-none">{line}</span>
+      {/* baseline yang kelihatan */}
+      <span className="chord-font text-primary whitespace-pre select-none">
+        {visibleLine}
+      </span>
 
       {/* overlay pill-chord di atas baseline */}
       <div className="absolute left-0 top-0 pointer-events-none">
@@ -136,7 +149,7 @@ const renderChordLine = (line: string, keyPrefix: string) => {
             key={`${keyPrefix}-ch-${idx}`}
             style={{
               position: "absolute",
-              left: `calc(${p.column}ch - 0.4ch)`, // 1ch = lebar 1 karakter monospace
+              left: `calc(${p.column}ch - 0.4ch)`,
               top: 0,
               pointerEvents: "auto",
             }}
