@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { ChordPart } from "@/data/mockSongs";
 import { transposeChordLine } from "@/utils/chordTransposer";
 import { ChordHover } from "./ChordHover";
@@ -164,14 +165,80 @@ const renderChordLine = (line: string, keyPrefix: string) => {
   );
 };
 
+/* =====================================================
+   MOBILE SMART SPLIT (MAX 2 BAGIAN)
+   ===================================================== */
+
+// Dynamic per-device maxLen
+const useDynamicMaxLen = () => {
+  const [maxLen, setMaxLen] = useState(40);
+
+  useEffect(() => {
+    const calc = () => {
+      const width = window.innerWidth;
+
+      // measure width of monospace char
+      const span = document.createElement("span");
+      span.style.fontFamily = "monospace";
+      span.style.fontSize = "16px";
+      span.style.visibility = "hidden";
+      span.innerText = "W";
+      document.body.appendChild(span);
+
+      const charWidth = span.getBoundingClientRect().width;
+      document.body.removeChild(span);
+
+      const maxChars = Math.floor(width / charWidth);
+
+      // boundary minimal biar tidak kependekan
+      setMaxLen(Math.max(24, maxChars));
+    };
+
+    calc();
+    window.addEventListener("resize", calc);
+    return () => window.removeEventListener("resize", calc);
+  }, []);
+
+  return maxLen;
+};
+
+// Max 2 line split
+const splitByLengthTwoParts = (raw: string, maxLen: number) => {
+  const text = raw.trim();
+  if (text.length <= maxLen) return [text];
+
+  let breakPos = text.lastIndexOf(" ", maxLen);
+  if (breakPos === -1) breakPos = maxLen;
+
+  const first = text.slice(0, breakPos).trim();
+  const second = text.slice(breakPos).trim();
+
+  return [first, second];
+};
+
+const useIsMobile = (bp = 600) => {
+  const [isMobile, setIsMobile] = useState<boolean>(() =>
+    typeof window !== "undefined" ? window.innerWidth <= bp : false
+  );
+  useEffect(() => {
+    const r = () => setIsMobile(window.innerWidth <= bp);
+    r();
+    window.addEventListener("resize", r);
+    return () => window.removeEventListener("resize", r);
+  }, [bp]);
+  return isMobile;
+};
+
 export const ChordDisplay = ({ chords, transpose }: ChordDisplayProps) => {
+  const isMobile = useIsMobile(600);
+  const dynamicMaxLen = useDynamicMaxLen();
+
   return (
     <div className="space-y-6">
       {chords.map((part, index) => {
-        const { chords: chordLine, lyric } = parseChordLyric(
-          part.chordLyric,
-          transpose
-        );
+        const rawLines = isMobile
+          ? splitByLengthTwoParts(part.chordLyric, dynamicMaxLen)
+          : [part.chordLyric];
 
         return (
           <div key={index} className="space-y-1">
@@ -181,15 +248,25 @@ export const ChordDisplay = ({ chords, transpose }: ChordDisplayProps) => {
               </h3>
             )}
 
-            <pre className="chord-font text-sm leading-snug whitespace-pre-wrap wrap-break-words relative">
-              {/* Baris chord – baseline + overlay pill */}
-              <span className="text-primary font-semibold block mb-1 whitespace-pre relative">
-                {renderChordLine(chordLine, `line-${index}`)}
-              </span>
+            {rawLines.map((raw, li) => {
+              const { chords: chordLine, lyric } = parseChordLyric(
+                raw,
+                transpose
+              );
 
-              {/* Baris lirik – boleh wrap ke bawah di mobile */}
-              <span className="text-foreground block">{lyric}</span>
-            </pre>
+              return (
+                <pre
+                  key={`${index}-${li}`}
+                  className="chord-font text-sm leading-snug whitespace-pre-wrap relative mb-2"
+                >
+                  <span className="text-primary font-semibold block mb-1 whitespace-pre relative">
+                    {renderChordLine(chordLine, `l-${index}-${li}`)}
+                  </span>
+
+                  <span className="text-foreground block">{lyric}</span>
+                </pre>
+              );
+            })}
           </div>
         );
       })}
