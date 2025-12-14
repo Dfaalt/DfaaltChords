@@ -1,11 +1,10 @@
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Header } from "@/components/Header";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Guitar, Plus, Trash2 } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 interface ChordSection {
@@ -70,22 +69,7 @@ export const UploadChord = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/">
-            <Button variant="ghost" size="sm">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back
-            </Button>
-          </Link>
-          <div className="flex items-center gap-2">
-            <Guitar className="h-5 w-5 text-primary" />
-            <span className="font-bold text-lg">Dfaalt Chords</span>
-          </div>
-          <ThemeToggle />
-        </div>
-      </header>
-
+      <Header variant="detail" />
       {/* Content */}
       <div className="container mx-auto px-4 py-8 max-w-3xl">
         <div className="mb-8">
@@ -124,7 +108,12 @@ export const UploadChord = () => {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Chord Sections</h2>
-              <Button type="button" onClick={addSection} size="sm">
+              <Button
+                type="button"
+                onClick={addSection}
+                size="sm"
+                className="cursor-pointer"
+              >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Section
               </Button>
@@ -142,6 +131,7 @@ export const UploadChord = () => {
                       type="button"
                       variant="ghost"
                       size="sm"
+                      className="cursor-pointer"
                       onClick={() => removeSection(index)}
                     >
                       <Trash2 className="h-4 w-4" />
@@ -192,7 +182,7 @@ export const UploadChord = () => {
             ))}
           </div>
 
-          <Button type="submit" size="lg" className="w-full">
+          <Button type="submit" size="lg" className="w-full cursor-pointer">
             Upload Song
           </Button>
         </form>

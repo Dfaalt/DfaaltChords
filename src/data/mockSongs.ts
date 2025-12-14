@@ -950,4 +950,608 @@ export const mockSongs: Song[] = [
       },
     ],
   },
+
+  {
+    id: 7,
+    title: "Payphone",
+    artist: "Maroon 5",
+    chords: [
+      // Intro
+      {
+        part: "Intro",
+        chordLyric: "I'm at a [Cadd9]payphone trying to [G]call home",
+      },
+      {
+        chordLyric: "All of my [Em7]change I spent on [Dsus4]you",
+      },
+      {
+        chordLyric: "Where have the [Cadd9]times gone baby",
+      },
+      {
+        chordLyric:
+          "It's [G]all wrong, where are the [Em7]plans we made for [Dsus4]two",
+      },
+
+      // Verse 1
+      {
+        part: "Verse 1",
+        chordLyric: "Yeah, [Cadd9]I, I know it's hard to remember",
+      },
+      {
+        chordLyric:
+          "[G]  The people we used to be [Em7]  It's even harder to picture",
+      },
+      {
+        chordLyric:
+          "[Dsus4]  That you're not here next to me [Cadd9] You say it's too late to make it",
+      },
+      {
+        chordLyric:
+          "[G]  But is it too late to try? [Em7]  And in our time that you wasted",
+      },
+      {
+        chordLyric: "[Dsus4]All of our bridges burned [Cadd9]down",
+      },
+
+      // Pre-Chorus 1
+      {
+        part: "Pre-Chorus",
+        chordLyric: "I've wasted my [G]nights You turned out the [Em7]lights",
+      },
+      {
+        chordLyric:
+          "Now I'm para[Dsus4]lyzed Still stuck in that [Cadd9]time when we called it [G]love",
+      },
+      {
+        chordLyric: "But even the [Em7]sun sets in para[Dsus4]dise",
+      },
+
+      // Chorus 1
+      {
+        part: "Chorus",
+        chordLyric: "I'm at a [Cadd9]payphone trying to [G]call home",
+      },
+      {
+        chordLyric: "All of my [Em7]change I spent on [Dsus4]you",
+      },
+      {
+        chordLyric: "Where have the [Cadd9]times gone baby",
+      },
+      {
+        chordLyric:
+          "It's [G]all wrong, where are the [Em7]plans we made for [Dsus4]two",
+      },
+      {
+        chordLyric: "If happy ever [Cadd9]after did exist[G]",
+      },
+      {
+        chordLyric: "I would still be [Em7]holding you like this[Dsus4]",
+      },
+      {
+        chordLyric: "And all those fairy[Cadd9]tales are full of shit[G]",
+      },
+      {
+        chordLyric: "One more stupid [Em7]love song I'll be sick[Dsus4]",
+      },
+
+      // Verse 2
+      {
+        part: "Verse 2",
+        chordLyric:
+          "[Cadd9]  You turned your back on tomorrow [G]  Cause you forgot yesterday",
+      },
+      {
+        chordLyric:
+          "[Em7]  I gave you my love to borrow [Dsus4]  But you just gave it away",
+      },
+      {
+        chordLyric:
+          "[Cadd9]  You can't expect me to be fine [G]  I don't expect you to care",
+      },
+      {
+        chordLyric:
+          "[Em7]  I know I've said it before [Dsus4]  But all of our bridges burned [Cadd9]down",
+      },
+
+      // Pre-Chorus 2
+      {
+        part: "Pre-Chorus",
+        chordLyric: "I've wasted my [G]nights You turned out the [Em7]lights",
+      },
+      {
+        chordLyric:
+          "Now I'm para[Dsus4]lyzed Still stuck in that [Cadd9]time when we called it [G]love",
+      },
+      {
+        chordLyric: "But even the [Em7]sun sets in para[Dsus4]dise",
+      },
+
+      // Chorus 2
+      {
+        part: "Chorus",
+        chordLyric: "I'm at a [Cadd9]payphone trying to [G]call home",
+      },
+      {
+        chordLyric: "All of my [Em7]change I spent on [Dsus4]you",
+      },
+      {
+        chordLyric: "Where have the [Cadd9]times gone baby",
+      },
+      {
+        chordLyric:
+          "It's [G]all wrong, where are the [Em7]plans we made for [Dsus4]two",
+      },
+      {
+        chordLyric: "If happy ever [Cadd9]after did exist[G]",
+      },
+      {
+        chordLyric: "I would still be [Em7]holding you like this[Dsus4]",
+      },
+      {
+        chordLyric: "And all those fairy[Cadd9]tales are full of shit[G]",
+      },
+      {
+        chordLyric: "One more stupid [Em7]love song I'll be sick[Dsus4]",
+      },
+
+      // Outro
+      {
+        part: "Outro",
+        chordLyric: "Now I'm at a [Cadd9]payphone",
+      },
+    ],
+  },
+
+  // Closer - The Chainsmokers feat. Halsey
+  {
+    id: 8,
+    title: "Closer",
+    artist: "The Chainsmokers feat. Halsey",
+    chords: [
+      // Intro
+      {
+        part: "Intro",
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+
+      // Verse 1
+      {
+        part: "Verse 1",
+        chordLyric:
+          "[Cadd9]Hey, I [D]was doing just [Em7]fine before I met you[D]",
+      },
+      {
+        chordLyric:
+          "I drank too [Cadd9]much and that's an issue [D]but I'm okay[Em7]     [D]",
+      },
+      {
+        chordLyric:
+          "[Cadd9]Hey, yo[D]u tell your f[Em7]riends it was nice to meet th[D]em",
+      },
+      {
+        chordLyric: "But I [Cadd9]hope I never [D]see them again[Em7]     [D]",
+      },
+
+      // Pre-Chorus
+      {
+        part: "Pre-Chorus",
+        chordLyric: "[Cadd9]  I know it breaks [D]your heart",
+      },
+      {
+        chordLyric: "[Em7]Moved to the city in a broke [D]down car and",
+      },
+      {
+        chordLyric: "[Cadd9]  Four years, no [D]calls",
+      },
+      {
+        chordLyric: "[Em7]Now you're looking pretty in a hotel [D]bar and",
+      },
+      {
+        chordLyric: "[Cadd9]I     ca[D]n't stop[Em7]     [D]",
+      },
+      {
+        chordLyric: "No, [Cadd9]I     ca[D]n't stop[Em7]     [D]",
+      },
+
+      // Chorus
+      {
+        part: "Chorus",
+        chordLyric:
+          "So [Cadd9]baby pull me clo[D]ser in the [Em7]backseat of your Ro[D]ver",
+      },
+      {
+        chordLyric: "That I [Cadd9]know you can't affo[D]rd",
+      },
+      {
+        chordLyric: "Bite that [Em7]tattoo on your [D]shoulder ",
+      },
+      {
+        chordLyric: "Pull the [Cadd9]sheets right off the cor[D]ner",
+      },
+      {
+        chordLyric: "Of the [Em7]mattress that you sto[D]le",
+      },
+      {
+        chordLyric: "From your [Cadd9]roommate back in Boulder[D]",
+      },
+      {
+        chordLyric: "We ain't [Em7]ever getting olde[D]r",
+      },
+
+      // Post-Chorus
+      {
+        part: "Post-Chorus",
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9]        [D] We ain't [Em7]ever getting older[D]",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9]        [D] We ain't [Em7]ever getting older[D]",
+      },
+
+      // Verse 2
+      {
+        part: "Verse 2",
+        chordLyric:
+          "[Cadd9]You, lo[D]ok as the [Em7]good as the day as I met y[D]ou ",
+      },
+      {
+        chordLyric:
+          "I for[Cadd9]get just why I [D]left you, I was in[Em7]sane  [D]",
+      },
+      {
+        chordLyric: "[Cadd9]Stay, a[D]nd play that [Em7]Blink-182 song[D]",
+      },
+      {
+        chordLyric:
+          "That we [Cadd9]beat to death in [D]Tucson, ok[Em7]ay   [D]",
+      },
+
+      // Pre-Chorus 2
+      {
+        part: "Pre-Chorus",
+        chordLyric:
+          "[Cadd9]I know it breaks your [D]heart [Em7]Moved to the city in a broke down [D]car and",
+      },
+      {
+        chordLyric:
+          "[Cadd9]Four years, no [D]calls [Em7]Now you're looking pretty in a hotel [D]bar and",
+      },
+      {
+        chordLyric: "[Cadd9]I     ca[D]n't stop[Em7]     [D]",
+      },
+      {
+        chordLyric: "No, [Cadd9]I     ca[D]n't stop[Em7]     [D]",
+      },
+
+      // Chorus 2
+      {
+        part: "Chorus",
+        chordLyric:
+          "So [Cadd9]baby pull me clo[D]ser in the [Em7]backseat of your Ro[D]ver",
+      },
+      {
+        chordLyric: "That I [Cadd9]know you can't affo[D]rd",
+      },
+      {
+        chordLyric: "Bite that [Em7]tattoo on your [D]shoulder ",
+      },
+      {
+        chordLyric: "Pull the [Cadd9]sheets right off the cor[D]ner",
+      },
+      {
+        chordLyric: "Of the [Em7]mattress that you sto[D]le",
+      },
+      {
+        chordLyric: "From your [Cadd9]roommate back in Boulder[D]",
+      },
+      {
+        chordLyric: "We ain't [Em7]ever getting olde[D]r",
+      },
+
+      // Post-Chorus Repeat
+      {
+        part: "Post-Chorus",
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9]        [D] We ain't [Em7]ever getting older[D]",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9]        [D] We ain't [Em7]ever getting older[D]",
+      },
+
+      // Chorus (final)
+      {
+        part: "Chorus",
+        chordLyric:
+          "So [Cadd9]baby pull me clo[D]ser in the [Em7]backseat of your Ro[D]ver",
+      },
+      {
+        chordLyric: "That I [Cadd9]know you can't affo[D]rd",
+      },
+      {
+        chordLyric: "Bite that [Em7]tattoo on your [D]shoulder ",
+      },
+      {
+        chordLyric: "Pull the [Cadd9]sheets right off the cor[D]ner",
+      },
+      {
+        chordLyric: "Of the [Em7]mattress that you sto[D]le",
+      },
+      {
+        chordLyric: "From your [Cadd9]roommate back in Boulder[D]",
+      },
+      {
+        chordLyric: "We ain't [Em7]ever getting olde[D]r",
+      },
+
+      // Outro
+      {
+        part: "Outro",
+        chordLyric:
+          "We ain't [Cadd9]ever getting [D]older (we ain't [Em7]ever getting o[D]lder)",
+      },
+      {
+        chordLyric:
+          "We ain't [Cadd9]ever getting [D]older (we ain't [Em7]ever getting o[D]lder)",
+      },
+      {
+        chordLyric:
+          "We ain't [Cadd9]ever getting [D]older (we ain't [Em7]ever getting o[D]lder)",
+      },
+      {
+        chordLyric:
+          "We ain't [Cadd9]ever getting [D]older (we ain't [Em7]ever getting o[D]lder)",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9]      [D] We ain't [Em7]ever getting older[D]",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9]      [D] We ain't [Em7]ever getting older[D]",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7  D]",
+      },
+      {
+        chordLyric: "[Cadd9 D  Em7 D]",
+      },
+    ],
+  },
+
+  // December - Neck Deep
+  {
+    id: 9,
+    title: "December",
+    artist: "Neck Deep",
+    chords: [
+      // Intro
+      {
+        part: "Intro",
+        chordLyric: "[C]",
+      },
+
+      // Verse 1
+      {
+        part: "Verse 1",
+        chordLyric: "Stumbled around the [C]block a thousand times",
+      },
+      {
+        chordLyric: "You missed every c[C]all that I had tried",
+      },
+      {
+        chordLyric: "So now I'm giving up",
+      },
+      {
+        chordLyric: "[Am]A heartbreak in mid December",
+      },
+      {
+        chordLyric: "You [Am]don't give a fuck",
+      },
+      {
+        chordLyric: "You never remember [F]me",
+      },
+      {
+        chordLyric: "While you're pulling on his j[F]eans",
+      },
+      {
+        chordLyric: "Getting lost in the big [C]city",
+      },
+
+      // Verse 2
+      {
+        part: "Verse 2",
+        chordLyric: "I was looking out our w[C]indow",
+      },
+      {
+        chordLyric: "Watching all the c[F]ars go",
+      },
+      {
+        chordLyric: "Wondering if I'll see Chi[F]cago",
+      },
+      {
+        chordLyric: "Or a sunset on the w[C]est coast",
+      },
+      {
+        chordLyric: "Or will I die in t[C]he cold",
+      },
+      {
+        chordLyric: "Feeling blue and [C]alone",
+      },
+      {
+        chordLyric: "I wonder if you'll [G]ever hear this song on your stereo",
+      },
+
+      // Chorus
+      {
+        part: "Chorus",
+        chordLyric: "[C]I hope you get your ball room f[G]loor",
+      },
+      {
+        chordLyric: "Your perfect house with rose red [Am]doors",
+      },
+      {
+        chordLyric: "I'm the last thing you'd re[F]member",
+      },
+      {
+        chordLyric: "It's been a long lonely De[C]cember",
+      },
+      {
+        chordLyric: "I wish I'd known that less is [G]more",
+      },
+      {
+        chordLyric: "But I was passed out on the f[Am]loor",
+      },
+      {
+        chordLyric: "That's the last thing I re[F]member",
+      },
+      {
+        chordLyric: "It's been a long lonely De[C]cember",
+      },
+
+      // Verse 3
+      {
+        part: "Verse 3",
+        chordLyric: "[C]Cast me aside to show yourself",
+      },
+      {
+        chordLyric: "In a better [C]light",
+      },
+      {
+        chordLyric: "I came out gr[F]ieving barely breathing",
+      },
+      {
+        chordLyric: "And you [F]came out alright",
+      },
+      {
+        chordLyric: "But I'm [Am]sure you'll take his hand",
+      },
+      {
+        chordLyric: "I hope he's [Am]better than I ever could have been",
+      },
+      {
+        chordLyric: "My mis[F]takes were not intentions",
+      },
+      {
+        chordLyric: "This is a [F]list of my confessions",
+      },
+      {
+        chordLyric: "I could[C]n't say",
+      },
+      {
+        chordLyric: "[F]Pain is never permanent",
+      },
+      {
+        chordLyric: "But tonight it's [G]killing me",
+      },
+
+      // Chorus 2
+      {
+        part: "Chorus",
+        chordLyric: "[C]I hope you get your ball room f[G]loor",
+      },
+      {
+        chordLyric: "Your perfect house with rose red [Am]doors",
+      },
+      {
+        chordLyric: "I'm the last thing you'd re[F]member",
+      },
+      {
+        chordLyric: "It's been a long lonely De[C]cember",
+      },
+      {
+        chordLyric: "I wish I'd known that less is [G]more",
+      },
+      {
+        chordLyric: "But I was passed out on the f[Am]loor",
+      },
+      {
+        chordLyric: "That's the last thing I re[F]member",
+      },
+      {
+        chordLyric: "It's been a long lonely De[Em]cember",
+      },
+
+      // Interlude
+      {
+        part: "Interlude",
+        chordLyric: "[Em  F  C  G]",
+      },
+      {
+        chordLyric: "[Em  F  G]",
+      },
+
+      // Bridge
+      {
+        part: "Bridge",
+        chordLyric: "[Em]I miss your fa[F]ce",
+      },
+      {
+        chordLyric: "You're in my he[C]ad",
+      },
+      {
+        chordLyric: "There's so many t[G]hings that I should have said",
+      },
+      {
+        chordLyric: "[Em]A year of suf[F]fering, a less[G]on learned",
+      },
+
+      // Bridge (Repeat)
+      {
+        chordLyric: "[Em]I miss your fa[F]ce",
+      },
+      {
+        chordLyric: "You're in my he[C]ad",
+      },
+      {
+        chordLyric: "There's so many t[G]hings that I should have said",
+      },
+      {
+        chordLyric: "[Em]A year of suf[F]fering, a less[G]on learned",
+      },
+
+      // Final Chorus
+      {
+        part: "Chorus",
+        chordLyric: "[C]I hope you get your ball room f[G]loor",
+      },
+      {
+        chordLyric: "Your perfect house with rose red [Am]doors",
+      },
+      {
+        chordLyric: "I'm the last thing you'd re[F]member",
+      },
+      {
+        chordLyric: "It's been a long lonely De[C]cember",
+      },
+      {
+        chordLyric: "I wish I'd known that less is [G]more",
+      },
+      {
+        chordLyric: "But I was passed out on the f[Am]loor",
+      },
+      {
+        chordLyric: "That's the last thing I re[F]member",
+      },
+      {
+        chordLyric: "It's been a long lonely De[C]cember",
+      },
+    ],
+  },
 ];

@@ -1,11 +1,10 @@
 import { SearchBar } from "@/components/SearchBar";
 import { SongCard } from "@/components/SongCard";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { mockSongs } from "@/data/mockSongs";
-import { Disc3, Plus, Guitar } from "lucide-react";
+import { Disc3 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 export const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -18,23 +17,7 @@ export const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Guitar className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">dfaalt chords</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Link to="/upload">
-              <Button variant="outline" size="sm">
-                <Plus className="h-4 w-4 mr-2" />
-                Upload Chord
-              </Button>
-            </Link>
-            <ThemeToggle />
-          </div>
-        </div>
-      </header>
+      <Header variant="home" />
 
       {/* Hero Section */}
       <section className="border-b border-border bg-linear-to-b from-background to-primary/5 py-16">
@@ -78,6 +61,7 @@ export const Index = () => {
           </div>
         )}
       </section>
+      <Footer />
     </div>
   );
 };

@@ -21,7 +21,7 @@ export const AutoScrollControls = ({
         variant={isScrolling ? "default" : "outline"}
         size="sm"
         onClick={onToggleScroll}
-        className="min-w-[120px]"
+        className="min-w-[120px] cursor-pointer"
       >
         {isScrolling ? (
           <>

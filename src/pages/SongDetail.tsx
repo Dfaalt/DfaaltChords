@@ -1,10 +1,10 @@
 import { AutoScrollControls } from "@/components/AutoScrollControls";
 import { ChordDisplay } from "@/components/ChordDisplay";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { TransposeControls } from "@/components/TransposeControls";
 import { Button } from "@/components/ui/button";
 import { mockSongs } from "@/data/mockSongs";
-import { ArrowLeft, Guitar } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -64,21 +64,7 @@ export const SongDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/">
-            <Button variant="ghost" size="sm">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back
-            </Button>
-          </Link>
-          <div className="flex items-center gap-2">
-            <Guitar className="h-5 w-5 text-primary" />
-            <span className="font-bold text-lg">Dfaalt Chords</span>
-          </div>
-          <ThemeToggle />
-        </div>
-      </header>
+      <Header variant="detail" />
 
       {/* Content */}
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -108,6 +94,7 @@ export const SongDetail = () => {
           <ChordDisplay chords={song.chords} transpose={transpose} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
