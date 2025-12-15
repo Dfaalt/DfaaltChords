@@ -26,8 +26,8 @@ export const Index = () => {
             Find Your Favorite Song
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Discover guitar chords and lyrics for thousands of songs, transpose,
-            auto-scroll, and play along with ease
+            Explore guitar chords and lyrics for your favorite songs. Transpose,
+            auto-scroll, and play along with ease.
           </p>
           <SearchBar value={searchQuery} onChange={setSearchQuery} />
         </div>

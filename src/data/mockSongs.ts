@@ -1217,12 +1217,16 @@ export const mockSongs: Song[] = [
       // Pre-Chorus 2
       {
         part: "Pre-Chorus",
-        chordLyric:
-          "[Cadd9]I know it breaks your [D]heart [Em7]Moved to the city in a broke down [D]car and",
+        chordLyric: "[Cadd9]  I know it breaks [D]your heart",
       },
       {
-        chordLyric:
-          "[Cadd9]Four years, no [D]calls [Em7]Now you're looking pretty in a hotel [D]bar and",
+        chordLyric: "[Em7]Moved to the city in a broke [D]down car and",
+      },
+      {
+        chordLyric: "[Cadd9]  Four years, no [D]calls",
+      },
+      {
+        chordLyric: "[Em7]Now you're looking pretty in a hotel [D]bar and",
       },
       {
         chordLyric: "[Cadd9]I     ca[D]n't stop[Em7]     [D]",
