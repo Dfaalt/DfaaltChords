@@ -14,7 +14,7 @@ export const Header = ({ variant = "home" }: HeaderProps) => {
         {/* Left */}
         {variant === "detail" ? (
           <Link to="/">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="cursor-pointer">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back
             </Button>
@@ -38,7 +38,7 @@ export const Header = ({ variant = "home" }: HeaderProps) => {
         <div className="flex items-center gap-2">
           {variant === "home" && (
             <Link to="/upload">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="cursor-pointer">
                 <Plus className="h-4 w-4 mr-2" />
                 Upload Chord
               </Button>

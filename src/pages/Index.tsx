@@ -20,7 +20,7 @@ export const Index = () => {
       <Header variant="home" />
 
       {/* Hero Section */}
-      <section className="border-b border-border bg-linear-to-b from-background to-primary/5 py-16">
+      <section className="border-b border-border bg-linear-to-b from-background to-primary/5 py-10">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4 leading-snug bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
             Find Your Favorite Song
